@@ -6,7 +6,7 @@
 /*   By: sawang <sawang@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/11 22:55:32 by sawang            #+#    #+#             */
-/*   Updated: 2023/08/14 15:42:35 by sawang           ###   ########.fr       */
+/*   Updated: 2023/09/03 16:20:43 by sawang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,10 @@ void Fixed::setRawBits(int const raw)
 	this->_fixedPointValue = raw;
 }
 
+//toFloat function
+// 1. convert the _fixedPointValue to float
+// 2. convert 1 in fixedPoint to float
+// 3. divide the (float)_fixedPointValue by (float)_fixedPoint_1
 float Fixed::toFloat(void) const
 {
 	return ((float)this->_fixedPointValue / (float)(1 << this->_fractionalBits));
