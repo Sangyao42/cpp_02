@@ -6,7 +6,7 @@
 /*   By: sawang <sawang@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/14 16:31:40 by sawang            #+#    #+#             */
-/*   Updated: 2023/08/15 17:33:41 by sawang           ###   ########.fr       */
+/*   Updated: 2023/09/12 19:42:51 by sawang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,9 +104,16 @@ bool Fixed::operator==(const Fixed &rhs) const
 	return (this->_fixedPointValue == rhs.getRawBits());
 }
 
+bool Fixed::operator!=(const Fixed &rhs) const
+{
+	return (this->_fixedPointValue != rhs.getRawBits());
+}
+
 /**
  * arithmetic operators
 */
+//understanding and implementing fixed point numbers
+//http://www.sunshine2k.de/articles/coding/fp/sunfp.html#:~:text=Fixed%20points%20numbers%20are%20represented,part%20is%20always%20the%20same.
 Fixed Fixed::operator+(const Fixed &rhs) const
 {
 	Fixed sum;
@@ -127,7 +134,7 @@ Fixed Fixed::operator*(const Fixed &rhs) const
 {
 	Fixed multiplication;
 
-	multiplication.setRawBits((int)((long)(this->_fixedPointValue * rhs.getRawBits()) >> this->_fractionalBits));
+	multiplication.setRawBits((int)(((long)this->_fixedPointValue * (long)rhs.getRawBits()) >> this->_fractionalBits));
 	return (multiplication);
 }
 
@@ -138,6 +145,22 @@ Fixed Fixed::operator/(const Fixed &rhs) const
 	division.setRawBits((int)((long)(this->_fixedPointValue << this->_fractionalBits) / rhs.getRawBits()));
 	return (division);
 }
+
+// Fixed Fixed::operator*(const Fixed &rhs) const
+// {
+// 	Fixed multiplication;
+
+// 	multiplication.setRawBits(static_cast<int>(static_cast<long>(this->_fixedPointValue * rhs.getRawBits()) >> this->_fractionalBits));
+// 	return (multiplication);
+// }
+
+// Fixed Fixed::operator/(const Fixed &rhs) const
+// {
+// 	Fixed division;
+
+// 	division.setRawBits(static_cast<int>(static_cast<long>(this->_fixedPointValue << this->_fractionalBits) / rhs.getRawBits()));
+// 	return (division);
+// }
 
 /**
  * increment and decrement operators

@@ -6,7 +6,7 @@
 /*   By: sawang <sawang@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/14 16:31:48 by sawang            #+#    #+#             */
-/*   Updated: 2023/08/15 17:46:52 by sawang           ###   ########.fr       */
+/*   Updated: 2023/09/12 19:46:58 by sawang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,10 @@ int	main(void)
 	std::cout << a-- << std::endl;
 	std::cout << a << std::endl;
 	std::cout << --a << std::endl;
+	std::cout << std::endl;
 
 	std::cout << b << std::endl;
+	std::cout << std::endl;
 
 	//min and max
 	std::cout << "max of a and b is " << Fixed::max(a, b) << std::endl;
@@ -41,10 +43,12 @@ int	main(void)
 	std::cout << "a - b = " << a - b << std::endl;
 	std::cout << "a * b = " << a * b << std::endl;
 	std::cout << "a / b = " << a / b << std::endl;
+	std::cout << std::endl;
 
 	Fixed const c(5.05f);
 	std:: cout << "c = " << c << std::endl;
 	std::cout << "min of b and c is " << Fixed::min(b, c) << std::endl;
+	std::cout << std::endl;
 
 	//comparision
 	if (c * 2 == b)
