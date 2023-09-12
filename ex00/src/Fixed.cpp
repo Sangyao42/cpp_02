@@ -6,7 +6,7 @@
 /*   By: sawang <sawang@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/11 22:19:53 by sawang            #+#    #+#             */
-/*   Updated: 2023/08/14 16:25:14 by sawang           ###   ########.fr       */
+/*   Updated: 2023/09/12 20:33:41 by sawang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ Fixed::Fixed(const Fixed &src)
 	*this = src;
 }
 
+// operator overloading guidelines:
+// http://courses.cms.caltech.edu/cs11/material/cpp/donnie/cpp-ops.html
 Fixed &Fixed::operator=(const Fixed &rhs)
 {
 	std::cout << "Copy assignment operator called" << std::endl;

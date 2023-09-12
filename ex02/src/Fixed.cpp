@@ -6,7 +6,7 @@
 /*   By: sawang <sawang@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/14 16:31:40 by sawang            #+#    #+#             */
-/*   Updated: 2023/09/12 19:42:51 by sawang           ###   ########.fr       */
+/*   Updated: 2023/09/12 20:34:08 by sawang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,7 +106,7 @@ bool Fixed::operator==(const Fixed &rhs) const
 
 bool Fixed::operator!=(const Fixed &rhs) const
 {
-	return (this->_fixedPointValue != rhs.getRawBits());
+	return !(*this == rhs);
 }
 
 /**

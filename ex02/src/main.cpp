@@ -6,7 +6,7 @@
 /*   By: sawang <sawang@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/14 16:31:48 by sawang            #+#    #+#             */
-/*   Updated: 2023/09/12 19:46:58 by sawang           ###   ########.fr       */
+/*   Updated: 2023/09/12 20:37:36 by sawang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,10 @@ int	main(void)
 		std::cout << "c equals to 1/2 of b" << std::endl;
 	else
 		std::cout << "c does not equal to 1/2 of b" << std::endl;
+	if (a != b)
+		std::cout << "a does not equal to b" << std::endl;
+	else
+		std::cout << "a equals to b" << std::endl;
 
 	return 0;
 }
